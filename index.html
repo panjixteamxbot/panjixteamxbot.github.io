@@ -1,0 +1,392 @@
+<style data-href="/styles.b301c1659df7e2dafb61.css" id="gatsby-global-css">
+.Hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 calc(var(--spacing-unit)*3);
+    align-items: center;
+    justify-content: center
+} 
+.Hero__wave {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+    animation: fadeIn .5s ease, wave .8s ease .5s
+}
+.Hero__subtitle, .Hero__title {
+    width: 100%;
+    max-width: 600px
+}
+.Hero__title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-top: calc(var(--spacing-unit)*8);
+    margin-bottom: calc(var(--spacing-unit)*2)
+}
+.Hero__title--text {
+    display: inline-block;
+    animation: fadeInTitle 1s ease
+}
+.Hero__subtitle {
+    animation: fadeInAfterTitle 1.5s ease;
+    margin-bottom: calc(var(--spacing-unit)*4);
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.61
+}
+@media (min-width: 720px) {
+    .Hero__subtitle {
+        font-size: 1.5rem
+    }
+}
+.Hero__company, .Hero__description, .Hero__job-title, .Hero__name {
+    font-weight: 700
+}
+.Hero__name {
+    color: var(--color-accent)
+}
+.Hero__links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    animation: fadeInAfterTitle 1.5s ease
+}
+.Hero__link {
+    margin: 0;
+    padding: 0;
+    display: inline
+}
+.Hero__link:not(:first-child) {
+    margin-left: calc(var(--spacing-unit)*4)
+}
+.Hero__link-icon {
+    font-size: 1.6rem;
+    transition: .2s ease;
+    will-change: transform
+}
+.Hero__link-icon:hover {
+    transform: translateY(-2px)
+}
+.Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 calc(var(--spacing-unit)*4);
+    margin-bottom: calc(var(--spacing-unit)*12)
+}
+@media (min-width: 720px) {
+    .Footer{
+        padding:0
+    }
+}
+.Section:not(:nth-of-type(2)) {
+    margin-top:calc(var(--spacing-unit)*16)
+}
+.Section:last-of-type {
+    margin-bottom:calc(var(--spacing-unit)*16)
+}
+.Section {
+    animation: fadeInAfterTitle 1.5s ease;
+    display: flex;
+    flex-direction: column
+}
+.Section__emoji {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0 auto;
+    font-size: 2.2rem
+}
+.Section__title {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: calc(var(--spacing-unit)*8)
+}
+.Section__title> span {
+    padding: 0 calc(var(--spacing-unit)*2);
+    z-index: 10;
+    background: var(--color-background)
+}
+.Section__title:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    content: "";
+    height: 1px;
+    background: var(--color-light-blue);
+    z-index: -1;
+    opacity: .5
+}
+.Section__content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 calc(var(--spacing-unit)*4)
+}
+@media (min-width:720px) {
+    .Section__content {
+        padding: 0
+    }
+}
+.Content p {
+    line-height: 1.61
+}
+.Content p:not(:last-child) {
+    margin-bottom: calc(var(--spacing-unit)*2)
+}
+.Content ul {
+    list-style-type: none
+}
+.Content li {
+    line-height: 1.61;
+    margin-bottom: calc(var(--spacing-unit)*2)
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+    20% {
+        opacity: 0
+    }
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(calc(var(--spacing-unit)*2))
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(calc(var(--spacing-unit)*2))
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+@keyframes fadeInAfterTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(calc(var(--spacing-unit)*2))
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(calc(var(--spacing-unit)*2))
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: bottom right 30px
+    }
+    40% {
+        transform: rotate(8deg)
+    }
+    60% {
+        transform: rotate(-10deg)
+    }
+    80% {
+        transform: rotate(8deg)
+    }
+    to {
+        transform: rotate(0deg);
+        transform-origin: bottom right 30px
+    }
+}
+*, :after, :before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+:root {
+    --spacing-unit: 8px;
+    --color-dark-blue: #ff6363;
+    --color-light-blue: #666666;
+    --color-primary: #ff1717
+}
+@media (prefers-color-scheme:dark) {
+    :root {
+        --color-accent: #ff1717;
+        --color-background: #222222;
+        --color-text: #fcfcfc;
+        --color-link: #ff6363
+    }
+}
+@media (prefers-color-scheme:light) {
+    :root {
+        --color-accent: #f7567c;
+        --color-background: #fcfcfc;
+        --color-text: #222222;
+        --color-link: #666666
+    }
+}
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: Sen, Roboto, Helvetica, Arial, sans-serif
+}
+a, a:active, a:visited {
+    color: var(--color-link);
+    text-decoration: none
+}
+</style>
+<div id="___gatsby">
+    <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+        <section class="Hero">
+            <h2 class="Hero__title">
+                <span class="Hero__wave" role="img" aria-label="Wave">🤖</span>
+                <span class="Hero__title--text">PANJI TEAM BOT</span>
+            </h2>
+            <p class="Hero__subtitle">Kami dari 
+                <span class="Hero__name">Panji Team Bot</span> membuka atau melayani order beberapa keperluan untuk 
+                <span class="Hero__job-title">LINE Messenger</span> dan juga aplikasi 
+                <span class="Hero__description">Smule</span>.
+            </p>
+            <ul class="Hero__links">
+                <li class="Hero__link"> 
+                    <a href="https://www.smule.com/PSI_PURN4M4" title="Smule">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="Hero__link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"></path>
+                        </svg>
+                    </a>
+                </li>                  
+                <li class="Hero__link">
+                    <a href="https://line.me/ti/p/~ragil_578" title="LINE Messenger">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="Hero__link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="Hero__link">
+                    <a href="https://wa.me/+85295457499" title="WhatsApp">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="Hero__link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="Hero__link">
+                    <a href="https://line.me/ti/p/~ptb_0622" title="Public Bot">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="Hero__link-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="Section">
+            <h4 class="Section__title">
+                <span>Layanan</span>
+            </h4>
+            <div class="Section__content">
+                <div class="Content">
+                    <ul>
+                        <li>
+                            <em>&quot;SelfBot LINE Messenger dengan fitur terbaru dan lengkap.&quot;</em>
+                            <br/>
+                            <strong>LINE Messenger</strong> | SelfBot Premium
+                        </li>
+                        <li>
+                            <em>&quot;SelfBot Premium dengan menggunakan Bot Backup (AntiJS)&quot;</em>
+                            <br/>
+                            <strong>LINE Messenger</strong> | SelfBot + AntiJS
+                        </li>
+                        <li>
+                            <em>&quot;Helper Bot untuk login pada SelfBot dengan batas jumlah user yang sudah ditentukan&quot;</em>
+                            <br/>
+                            <strong>LINE Messenger</strong> | Helper Bot
+                        </li>
+                        <li>
+                            <em>&quot;Protect Bot untuk melindungi grup dari serangan Kicker&quot;</em>
+                            <br/>
+                            <strong>LINE Messenger</strong> | Protect Bot
+                        </li>
+                        <li>
+                            <em>&quot;War Bot untuk pertarungan antar Bot dengan sistem kelompok&quot;</em>
+                            <br/>
+                            <strong>LINE Messenger</strong> | War Bot
+                        </li>
+                        <li>
+                            <em>&quot;Token Primay untuk keperluan Bot LINE&quot;</em>
+                            <br/>
+                            <strong>LINE Messenger</strong> | Primary Token
+                        </li>
+                        <li>
+                            <em>&quot;Akun koin untuk keperluan pembelian di LINE Store&quot;</em>
+                            <br/>
+                            <strong>LINE Messenger</strong> | Account Coin
+                        </li>
+                        <li>
+                            <em>&quot;Sticker, Emoji, Tema resmi atau non-resmi&quot;</em>
+                            <br/>
+                            <strong>LINE Messenger</strong> | Additional
+                        </li>
+                        <li>
+                            <em>&quot;Token, Pulsa & Kuota data dengan semua operator Indonesia&quot;</em>
+                            <br/>
+                            <strong>Service</strong> | Additional
+                        </li>
+                        <li>
+                            <em>&quot;Akses akun Smule VIP untuk Android & iPhone&quot;</em>
+                            <br/>
+                            <strong>Smule</strong> | VIP
+                        </li>
+                        <li>
+                            <em>&quot;Song Book untuk keperluan aransmen lagu pada aplikasi Smule&quot;</em>
+                            <br/>
+                            <strong>Smule</strong> | Song Book
+                        </li>
+                        <li>
+                            <em>&quot;Pembekuan akun sebagai laporan pada akun terkait untuk keperluan aplikasi Smule&quot;</em>
+                            <br/>
+                            <strong>Smule</strong> | Freeze Account
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="Section">
+            <h4 class="Section__title">
+                <span>Pembayaran</span>
+            </h4>
+            <div class="Section__content">
+                <div class="Content">
+                    <ul>
+                        <li>
+                            <strong>BNI</strong> | 1059306625
+                        </li>
+                        <li>
+                            <strong>DANA</strong> | +6285202017371
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer class="Footer">
+            <div class="Content">
+                <p style="text-align:center">
+                    <span role="img" aria-label="Copyrights">© </span>2022, 
+                    <a href="https://line.me/ti/p/~ragil_578">Panji Team Bot</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</div>
